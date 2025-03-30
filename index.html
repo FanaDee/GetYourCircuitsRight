@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetYourCircuitsRight</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>GetYourCircuitsRight</h1>
+        <p>Why fail circuit calculations when you have GetYourCircuitsRight?</p>
+    </header>
+
+    <div class="calculator">
+        <h2>Ohm's Law Calculator</h2>
+        <input type="number" id="value1" placeholder="Enter first value">
+        <input type="number" id="value2" placeholder="Enter second value">
+        <select id="calculationType">
+            <option value="voltage">Find Voltage (V)</option>
+            <option value="current">Find Current (I)</option>
+            <option value="resistance">Find Resistance (R)</option>
+        </select>
+        <button onclick="calculateOhm()">Calculate</button>
+        <h2 id="result"></h2>
+    </div>
+
+    <div class="kirchhoff">
+        <h2>Kirchhoff's Law Solver</h2>
+        <textarea id="kvlequations" placeholder="Enter equations..."></textarea>
+        <button onclick="solveKVL()">Solve</button>
+        <h2 id="kvlResult"></h2>
+        <p id="explanation"></p>
+    </div>
+
+    <div class="circuit-tools">
+        <h2>Upload or Draw Your Circuit</h2>
+        <input type="file" id="uploadCircuit" accept="image/*">
+        <canvas id="circuitCanvas"></canvas>
+    </div>
+
+    <footer>
+        <p>Created by The Winning Team Corp.</p>
+    </footer>
+</body>
+</html>
